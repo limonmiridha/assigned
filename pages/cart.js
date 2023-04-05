@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import { FaMinusCircle, FaPlusCircle } from 'react-icons/fa';
 import { useCart } from 'react-use-cart';
@@ -13,12 +14,12 @@ const CartPage = () => {
       {items.length === 0 ? (
         <p>
           Your cart is empty. Do some{' '}
-          <a
+          <Link
             href="/shop"
             className="text-blue-500 hover:text-green-400 transition font-bold"
           >
             shopping ...
-          </a>
+          </Link>
         </p>
       ) : (
         <>
